@@ -62,7 +62,7 @@ body {
 .grid_box {
   display: grid;
  
-  /* height: 80%; */
+  height: 100%;
   align-content: center;
   grid-template-columns: auto 4% auto;
   gap: 10px;
