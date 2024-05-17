@@ -1,18 +1,12 @@
 # WhatsApp Message Sender via CSV
 
-This project allows you to send WhatsApp messages to multiple recipients using a CSV file. It utilizes the WhatsApp Web interface to automate the message sending process using Node.js and Puppeteer.
+This project allows you to send WhatsApp messages to multiple recipients using a CSV file. It utilizes the WhatsApp Web interface to automate the message sending process using html css & js
 
 ## Features
 
 - Send personalized WhatsApp messages to a list of contacts.
 - Uses a CSV file to manage recipients and messages.
-- Automates the WhatsApp Web interface for message sending.
-
-## Requirements
-
-- Node.js
-- Puppeteer
-- A CSV parser library (e.g., `csv-parser`)
+- Automates? the WhatsApp Web interface for message sending.
 
 ## Installation
 
@@ -22,16 +16,12 @@ This project allows you to send WhatsApp messages to multiple recipients using a
     cd whatsappmsgsendercsv
     ```
 
-2. Install the required Node.js packages:
-    ```sh
-    npm install
-    ```
 
 ## Usage
 
 1. Prepare your CSV file:
     - The CSV file should have at least two columns: `name` and `number`.
-    - Optionally, you can add a `message` column if you want to send personalized messages.
+    - Optionally, you can't add a `message` column if you want to send personalized messages.
 
     Example `contacts.csv`:
     ```csv
@@ -39,17 +29,6 @@ This project allows you to send WhatsApp messages to multiple recipients using a
     John Doe,+1234567890,
     Jane Smith,+0987654321
     ```
-
-2. Update the `config.js` file:
-    - Set the `CSV_FILE_PATH` variable to the path of your CSV file.
-    - Set the `MESSAGE` variable if you want to use a generic message for all recipients.
-
-3. Run the script:
-    ```sh
-    node whatsappmsgsender.js
-    ```
-
-4. The script will open your default web browser, navigate to WhatsApp Web, and start sending messages to the recipients listed in your CSV file.
 
 ## Notes
 
