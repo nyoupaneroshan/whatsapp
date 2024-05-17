@@ -35,9 +35,9 @@ This project allows you to send WhatsApp messages to multiple recipients using a
 
     Example `contacts.csv`:
     ```csv
-    name,number,message
-    John Doe,+1234567890,Hello John! This is a test message.
-    Jane Smith,+0987654321,Hi Jane! How are you?
+    name,number
+    John Doe,+1234567890,
+    Jane Smith,+0987654321
     ```
 
 2. Update the `config.js` file:
