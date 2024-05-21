@@ -45,6 +45,8 @@ radioButtons.forEach((radio) => {
   radio.addEventListener("change", () => {
     if (radio.checked) {
       method = radio.id;
+        document.body.classList.toggle('web')
+      
     }
   });
 });
@@ -98,3 +100,7 @@ function extractNumbersFromCSV(content) {
 
   return Array.from(numbersSet);
 }
+
+
+let date = new Date()
+date.toLocaleDateString()

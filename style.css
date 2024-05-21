@@ -9,6 +9,10 @@
   --secondaryClr: #111b21;
   --textClr: #122e31;
 }
+body.web{
+  --primaryClr: #5337f4;
+
+}
 body {
   background-color: var(--secondaryClr);
   min-height: 100vh;
