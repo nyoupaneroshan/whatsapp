@@ -1,49 +1,64 @@
-# WhatsApp Message Sender via CSV
+✅ Features
+Send WhatsApp messages in bulk using a CSV file.
 
-This project allows you to send WhatsApp messages to multiple recipients using a CSV file. It utilizes the WhatsApp Web interface to automate the message sending process using html css & js
+Personalized messages for each recipient (optional).
 
-## Features
+Simple interface built with HTML, CSS, and JavaScript.
 
-- Send personalized WhatsApp messages to a list of contacts.
-- Uses a CSV file to manage recipients and messages.
-- Automates? the WhatsApp Web interface for message sending.
+Runs entirely in the browser — no external dependencies or backend required.
 
-## Installation
+📥 Installation / Setup
+Clone or download this repository:
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/vebpath/whatsappmsgsendercsv.git
-    cd whatsappmsgsendercsv
-    ```
+bash
+Copy
+Edit
+git clone https://github.com/nyoupaneroshan/whatsapp.git
+cd whatsapp
+Open the index.html file in your browser.
 
+📁 CSV File Format
+Prepare a CSV file with the following columns:
 
-## Usage
+c
+Copy
+Edit
+name,number,message
+John Doe,+1234567890,Hello John!
+Jane Smith,+0987654321,Hi Jane, how are you?
+name: (Optional) Used for personalization.
 
-1. Prepare your CSV file:
-    - The CSV file should have at least two columns: `name` and `number`.
-    - Optionally, you can't add a `message` column if you want to send personalized messages.
+number: Phone number in international format (without spaces or special characters).
 
-    Example `contacts.csv`:
-    ```csv
-    name,number
-    John Doe,+1234567890,
-    Jane Smith,+0987654321
-    ```
+message: (Optional) Custom message for each recipient.
 
-## Notes
+*please note currently the this project supports only number with over no limitation to the number be uploaded
 
-- Ensure you have logged into WhatsApp Web on your default browser before running the script.
-- The script may require manual intervention if WhatsApp Web prompts for verification.
+If the message column is empty, a default message will be used.
 
-## Troubleshooting
+🚀 How to Use
+Open the tool in your browser.
 
-- If the script fails to run, ensure that Node.js is correctly installed and the required packages are installed.
-- If the browser does not open WhatsApp Web, check if Puppeteer is correctly installed and is compatible with your version of Chrome or Chromium.
+Click the "Upload CSV" button and select your contacts file.
 
-## Contributing
+Review the list of recipients.
 
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+Click "Send Messages".
 
+WhatsApp Web will open in a new tab for each message.
 
+⚠️ Make sure you're already logged into WhatsApp Web before using this tool.
 
-# whatsapp
+📝 Notes
+This tool simulates clicks and URL redirections via WhatsApp Web; it does not use any WhatsApp API.
+
+Browser pop-up blocking must be disabled for this to work properly.
+
+🛠️ Troubleshooting
+Make sure phone numbers are in the correct international format.
+
+If messages are not sent, check your browser's pop-up settings or developer console for errors.
+
+🤝 Contributing
+Contributions are welcome!
+Please fork the repository and submit a pull request for new features, bug fixes, or improvements.

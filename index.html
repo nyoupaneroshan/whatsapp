@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Effortlessly blast WhatsApp messages directly from your CSV!" />
   <meta name="keywords" content="WhatsappMSG, message, whatsapp, sender" />
-  <meta name="author" content="Ranjan" />
+  <meta name="author" content="Roshan, 11TechMedia" />
   <meta name="theme-color" content="#00a884" />
   <link rel="canonical" href="https://vebpath.github.io/whatsappmsgsendercsv/" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/" />
@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <link rel="manifest" href="./images/site.webmanifest" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>WhatsappMSG - 11TechMedia</title>
   <style>
@@ -22,7 +23,8 @@
       --bg: #f0f2f5;
       --white: #fff;
       --gray: #555;
-      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease-in-out;
     }
 
     body {
@@ -30,16 +32,26 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg);
       color: var(--gray);
+      overflow-x: hidden;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .wrapper {
       max-width: 600px;
-      margin: auto;
+      margin: 3rem auto;
       padding: 2rem;
       background: var(--white);
       border-radius: 1rem;
       box-shadow: var(--shadow);
-      margin-top: 3rem;
+      animation: fadeIn 0.5s ease-in-out forwards;
     }
 
     .header_wrapper {
@@ -60,15 +72,17 @@
       color: var(--primary);
     }
 
-    .hero .desp {
+    .desp {
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease forwards;
     }
 
     .choise {
       display: flex;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .choise input[type="radio"] {
@@ -80,17 +94,12 @@
       background: var(--bg);
       border-radius: 20px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: var(--transition);
     }
 
-    .choise input[type="radio"]:checked+label {
+    .choise input[type="radio"]:checked + label {
       background: var(--primary);
       color: white;
-    }
-
-    .grid_box {
-      display: grid;
-      gap: 2rem;
     }
 
     .input_wrapper {
@@ -101,6 +110,7 @@
       background: var(--bg);
       padding: 0.75rem;
       border-radius: 10px;
+      transition: var(--transition);
     }
 
     .input_text {
@@ -109,6 +119,10 @@
       background: transparent;
       flex: 1;
       font-size: 1rem;
+    }
+
+    .input_wrapper:hover {
+      box-shadow: var(--shadow);
     }
 
     button {
@@ -122,7 +136,12 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      transition: var(--transition);
       box-shadow: var(--shadow);
+    }
+
+    button:hover {
+      transform: scale(1.03);
     }
 
     .divider {
@@ -131,6 +150,7 @@
       text-align: center;
       color: var(--gray);
       gap: 1rem;
+      margin: 1.5rem 0;
     }
 
     .divider span {
@@ -145,6 +165,12 @@
       padding: 2rem;
       text-align: center;
       background: var(--bg);
+      transition: var(--transition);
+    }
+
+    .upload_box:hover {
+      background: #e0f7f1;
+      border-color: var(--primary);
     }
 
     .upload_box label {
@@ -153,6 +179,7 @@
       color: var(--primary);
       cursor: pointer;
       font-weight: bold;
+      transition: var(--transition);
     }
 
     .upload_box input {
@@ -169,29 +196,90 @@
       gap: 0.5rem;
       color: #2e7d32;
       font-weight: 500;
+      animation: fadeIn 1.5s ease forwards;
     }
 
     .message i {
       font-size: 1.5rem;
     }
+
+    .back-home {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .back-home:hover {
+      transform: scale(1.05);
+      background: #007c65;
+    }
+
+    .guide-widget {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      width: 250px;
+      font-size: 0.9rem;
+      z-index: 999;
+      animation: fadeIn 2s ease;
+    }
+
+    .guide-widget h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .guide-widget ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .guide-widget li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <span class="header_wrapper">
+  <a href="https://11techmedia.com.np" class="back-home">
+    <i class='bx bx-arrow-back'></i> Home
+  </a>
+  <div class="guide-widget fade-in">
+    <h4>How to Use</h4>
+    <ul>
+      <li>📱 Enter a phone number manually and type a message to send.</li>
+      <li>📁 To send messages in bulk, upload a <strong>.CSV</strong> file with: <code>number,message</code></li>
+      <li>📤 Click <strong>Send</strong> to dispatch your messages.</li>
+      <li>📊 Progress is shown live below.</li>
+      <li>🧪 <a href="samplelist.csv" target="_blank">Download Sample CSV</a></li>
+    </ul>
+  </div>
+  <div class="wrapper fade-in">
+    <div class="header_wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-        <path fill="#00E676" d="M10.7 32.8l.6.3c2.5 1.5 5.3 2.2 8.1 2.2 8.8 0 16-7.2 16-16 0-4.2-1.7-8.3-4.7-11.3s-7-4.7-11.3-4.7c-8.8 0-16 7.2-15.9 16.1 0 3 .9 5.9 2.4 8.4l.4.6-1.6 5.9 6-1.5z"></path>
+        <path fill="#00E676" d="M10.7 32.8l.6.3c2.5 1.5 5.3 2.2 8.1 2.2 8.8 0 16-7.2 16-16 0-4.2-1.7-8.3-4.7-11.3s-7-4.7-11.3-4.7c-8.8 0-16 7.2-15.9 16.1 0 3 .9 5.9 2.4 8.4l.4.6-1.6 5.9 6-1.5z" />
         <path fill="#FFF" d="..." />
       </svg>
       <p>Whatsapp Message</p>
-    </span>
+    </div>
     <main class="hero">
-      <div class="descripton">
-        <p class="desp">
-          Send WhatsApp messages to unsaved numbers effortlessly. Import contacts from CSV files for efficient communication. Streamline your messaging strategy today.
-        </p>
-      </div>
+      <p class="desp">Send WhatsApp messages to unsaved numbers effortlessly. Import contacts from CSV files for efficient communication. Streamline your messaging strategy today.</p>
       <form class="choise">
         <input name="Whatsapp1" id="api" type="radio" checked />
         <label for="api">Whatsapp</label>
@@ -209,8 +297,7 @@
             <input class="input_text" type="text" placeholder="Message" id="messageInput" />
           </div>
           <button onclick="send()">
-            Send
-            <i class="bx bx-send"></i>
+            Send <i class="bx bx-send"></i>
           </button>
         </section>
         <div class="divider">
