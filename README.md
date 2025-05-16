@@ -24,21 +24,19 @@ A simple browser-based tool to send bulk WhatsApp messages using a CSV file. Bui
 2. Open the index.html file in your browser.
 
 ### 📁 CSV File Format
-Prepare a CSV file with the following format:
-csv
-Copy
-Edit
+ Prepare a CSV file with the following format:
+ 
 name,number,message
 John Doe,+1234567890,Hello John!
 Jane Smith,+0987654321,Hi Jane, how are you?
-name (optional): Used for personalization.
+name (optional): Used for personalization. (will not be selected)
 
 
-number: Phone number in international format (e.g., +9779812345678). No spaces or special characters.
+number: Phone number in international format (e.g., +9779812345678). No spaces or special characters. (this is the main segment)
 
-message (optional): Custom message for each contact.
+message (optional): Custom message for each contact.( will not be selected)
 
-⚠️ Note: Currently, the project only supports message sending based on phone numbers. There is no limit on how many contacts you can upload.
+ **Note:**: Currently, the project only supports message sending based on phone numbers. There is no limit on how many contacts you can upload.
 
 If the message column is empty, a default message will be used.
 
