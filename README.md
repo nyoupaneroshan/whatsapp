@@ -1,43 +1,48 @@
-✅ Features
-Send WhatsApp messages in bulk using a CSV file.
+# 📤 WhatsApp Message Sender via CSV
 
-Personalized messages for each recipient (optional).
+A simple browser-based tool to send bulk WhatsApp messages using a CSV file. Built using **HTML, CSS, and JavaScript**, this project enables easy message sending through WhatsApp Web without any backend or external dependency.
 
-Simple interface built with HTML, CSS, and JavaScript.
+---
 
-Runs entirely in the browser — no external dependencies or backend required.
+## ✅ Features
 
-📥 Installation / Setup
-Clone or download this repository:
+- 📁 Send WhatsApp messages in **bulk** using a CSV file.
+- 💬 Supports **personalized messages** for each recipient.
+- 💻 Built with **HTML, CSS, and JavaScript** — no backend required.
+- 🌐 Runs **entirely in the browser** — no installation needed.
 
-bash
-Copy
-Edit
-git clone https://github.com/nyoupaneroshan/whatsapp.git
-cd whatsapp
-Open the index.html file in your browser.
+---
 
+## 📥 Installation / Setup
+
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/nyoupaneroshan/whatsapp.git
+   cd whatsapp
+
+
+2. Open the index.html file in your browser.
 📁 CSV File Format
-Prepare a CSV file with the following columns:
+Prepare a CSV file with the following format:
 
-c
+csv
 Copy
 Edit
 name,number,message
 John Doe,+1234567890,Hello John!
 Jane Smith,+0987654321,Hi Jane, how are you?
-name: (Optional) Used for personalization.
+name (optional): Used for personalization.
 
-number: Phone number in international format (without spaces or special characters).
+number: Phone number in international format (e.g., +9779812345678). No spaces or special characters.
 
-message: (Optional) Custom message for each recipient.
+message (optional): Custom message for each contact.
 
-*please note currently the this project supports only number with over no limitation to the number be uploaded
+⚠️ Note: Currently, the project only supports message sending based on phone numbers. There is no limit on how many contacts you can upload.
 
 If the message column is empty, a default message will be used.
 
 🚀 How to Use
-Open the tool in your browser.
+Open index.html in your browser.
 
 Click the "Upload CSV" button and select your contacts file.
 
@@ -47,18 +52,5 @@ Click "Send Messages".
 
 WhatsApp Web will open in a new tab for each message.
 
-⚠️ Make sure you're already logged into WhatsApp Web before using this tool.
+🔐 Make sure you're already logged into WhatsApp Web at web.whatsapp.com.
 
-📝 Notes
-This tool simulates clicks and URL redirections via WhatsApp Web; it does not use any WhatsApp API.
-
-Browser pop-up blocking must be disabled for this to work properly.
-
-🛠️ Troubleshooting
-Make sure phone numbers are in the correct international format.
-
-If messages are not sent, check your browser's pop-up settings or developer console for errors.
-
-🤝 Contributing
-Contributions are welcome!
-Please fork the repository and submit a pull request for new features, bug fixes, or improvements.
