@@ -36,7 +36,7 @@ number: Phone number in international format (e.g., +9779812345678). No spaces o
 
 message (optional): Custom message for each contact.( will not be selected)
 
- **Note:**: Currently, the project only supports message sending based on phone numbers. There is no limit on how many contacts you can upload.
+ **Note:** Currently, the project only supports message sending based on phone numbers. There is no limit on how many contacts you can upload.
 
 If the message column is empty, a default message will be used.
 
